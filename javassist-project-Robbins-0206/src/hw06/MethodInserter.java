@@ -41,7 +41,7 @@ public class MethodInserter {
 	         CtClass cc = pool.get(classname);
 	         CtMethod m = cc.getDeclaredMethod(mname);
 	         String pblock = "{ "
-	               + "System.out.println(\"[Inserted] " + classname + "'s param1: \" + $" + pmindex + "); "
+	               + "System.out.println(\"[Inserted] " + classname + "'s param" + pmindex + ": \" + $" + pmindex + "); "
 	               + "}";
 	         m.insertBefore(pblock);
 	         
